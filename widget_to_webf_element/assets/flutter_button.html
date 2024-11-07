@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<flutter-button id="create" type="primary">Button</flutter-button>
+<script>
+      const createButton = document.getElementById('create');
+      createButton.addEventListener('click', () => {
+        if (createButton.type === 'primary') {
+          createButton.type = 'default';
+        } else if (createButton.type === 'default') {
+          createButton.style.margin = '20px';
+          createButton.type = 'dead';
+        } else if (createButton.type === 'dead') {
+          createButton.dispatchRemove();
+        }
+      });
+
+      createButton.addEventListener('remove', () => {
+        createButton.remove();
+      });
+    </script>
+</body>
+</html>
