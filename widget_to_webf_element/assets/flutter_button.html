@@ -6,12 +6,14 @@
       const createButton = document.getElementById('create');
       createButton.addEventListener('click', () => {
         if (createButton.type === 'primary') {
+          createButton.style.margin = '10px';
           createButton.type = 'default';
         } else if (createButton.type === 'default') {
           createButton.style.margin = '20px';
           createButton.type = 'dead';
         } else if (createButton.type === 'dead') {
-          createButton.dispatchRemove();
+          createButton.style.margin = '30px';
+          createButton.type = 'primary';
         }
       });
 
